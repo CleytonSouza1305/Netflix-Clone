@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #141414;
+  color: #fff;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.container h1 {
+  font-size: 3.5vw;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.profiles .cards {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.profiles .cards .image {
+  border-radius: 4px;
+  border: 4px solid transparent;
+}
+
+.profiles .cards img{
+  width: 168px;
+  border-radius: 4px;
+}
+
+.profiles .cards p {
+  font-size: 24px;
+  color: rgb(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: 0.7rem;
+  font-weight: 600;
+}
+
+.profiles .cards:hover .image{
+  border-color: rgb(255, 255, 255, 0.8);
+}
+
+.profiles .cards:hover p {
+  color: rgb(255, 255, 255, 0.8);
+}
+
+.profiles .cards .more-profile {
+  width: 168px;
+  height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: rgb(255, 255, 255, 0.6);
+  border-color: rgb(255, 255, 255, 0.6);
+}
+
+.profiles .cards:hover .more-profile {
+  color: rgb(255, 255, 255, 0.8);
+}
+
+.profiles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap; 
+  gap: 1.5rem; 
+}
+
+.window-more-profile {
+  background-color: #2d2d2d;
+  width: 400px;
+  height: 150px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.window-more-profile label {
+  font-weight: 600;
+}
+
+.window-more-profile input {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 0.3rem 0.5rem;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.window-more-profile button {
+  outline: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.window-more-profile button:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.div-btn {
+  padding: 2rem 0 1rem 0;
+}
+
+.fade {
+  transition: ease-in-out 0.3ms;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgb(20, 20, 20, 0.5));
+}
+
+.btn-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-div button {
+  background-color: transparent;
+  border: 1px solid grey;
+  color: grey;
+  cursor: pointer;
+  display: block;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+  margin: 2em 0 1em;
+  padding: .5em 1.5em;
+}
+
+.btn-div button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.display {
+  display: none;
+}

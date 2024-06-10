@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix</title>
+
+  <link rel="shortcut icon" href="src/images/netflix-simbolo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/css/login.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <main>
+    <div class="fade">
+      <header>
+        <img src="src/images/netflix-logo.png" alt="Símbolo da Netflix">
+    </header>
+      <div class="container">
+        <div class="card">
+          <h1>Entrar</h1>
+          <div class="user-not-found display">
+            <p>Usuário não encontrado, <a href="#" id="newUser">Criar conta!</a></p>
+          </div>
+          <form>
+            <div class="input-group email-group">
+              <input type="text" id="email-or-number" autocomplete="off">
+              <label for="email-or-number">Email ou número de celular</label>
+            </div>
+            <p class="error-span email-error display"></p>
+            <div class="input-group">
+              <input type="password" id="password">
+              <label for="password">Senha</label>
+            </div>
+            <p class="error-span pass-error display"></p>
+            <div class="input-group phone-group display">
+              <input type="text" id="phone" autocomplete="off">
+              <label for="phone">Número de telefone</label>
+            </div>
+            <p class="error-span phone-error display"></p>
+
+            <button type="submit" class="btns entrar" id="submitBtn">Entrar</button>
+            <p>OU</p>
+            <button type="button" class="btns access-code" id="access-code">Usar um código de acesso</button>
+            <a href="#" id="remember-pass">Esqueceu a senha?</a>
+          </form>
+          <footer>
+            <div class="container-check">
+              <div class="remember-me">
+                <div class="remember-me-check">
+                  <input type="checkbox" name="check" id="check-input" checked>
+                  <label for="check-input">Lembre-se de mim</label>
+                </div>
+              </div>
+            </div>
+            <p class="new-here">Novo por aqui? <a href="#">Assine agora.</a></p>
+            <div class="last-div">
+              <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <button id="see-more" type="button">Saiba mais.</button></p>
+            </div>
+            <div class="see-more-infos display">
+              <p>
+                As informações recolhidas pelo Google reCAPTCHA estão sujeitas à <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade</a> e <a href="https://policies.google.com/terms" target="_blank">Termos de Uso</a>, e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google).
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </main>
+    <footer class="outher-footer">
+      <div class="footer-infos">
+        <div class="phone">Dúvidas? Ligue <a href="#" target="_blank">0800 591 2876</a></div>
+        <div class="infos-geral">
+          <div>
+            <ul>
+              <li><a href="#" target="_blank">Perguntas frequentes</a></li>
+              <li><a href="#" target="_blank">Central de ajuda</a></li>
+              <li><a href="#" target="_blank">Termos de uso</a></li>
+              <li><a href="#" target="_blank">Privacidade</a></li>
+              <li><a href="#" target="_blank">Preferência de cookies</a></li>
+              <li><a href="#" target="_blank">Informações corporativas</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="language">
+          <select name="language" id="language">
+            <option value="pt-BR">Português</option>
+            <option value="en-BR">English</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+
+  <script src="src/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "bigcleyton@gmail.com",
+      "password": "130504Cleyt0n",
+      "phoneNumber": "11985961027",
+      "profiles": [
+        {
+          "imageUrl": "https://pm1.aminoapps.com/6936/941ca032795b0d863289ffe9fea681b4c6a7fc7ar1-640-640v2_00.jpg",
+          "profileName": "Bebê E Ciel"
+        },
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png",
+          "profileName": "Raissa"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "email": "raissa@gmail.com",
+      "password": "130504Cleyt0n",
+      "phoneNumber": "11985961027",
+      "profiles": [
+        {
+          "imageUrl": "https://external-preview.redd.it/yble0xDFerMYRYRz9uUgrVhnBrzVULNvCX38QH1za_U.jpg?auto=webp&s=1fc278147524128e733102857f9834a857047ab3",
+          "profileName": "Seu namorado"
+        },
+        {
+          "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/c7906d33850498.56ba69ac353e1.png",
+          "profileName": "Raissa"
+        }
+      ]
+    },
+    {
+      "id": "a892",
+      "email": "",
+      "password": "",
+      "phoneNumber": "",
+      "profiles": [
+        {
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png",
+          "profileName": "new user"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix | Browse</title>
+
+  <link rel="shortcut icon" href="../src/images/netflix-simbolo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../src/css/browse.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1>Quem esta assistindo?</h1>
+    <div class="profiles">
+      <div class="cards" id="btn-more">
+        <div class="image">
+         <div class="more-profile">
+          <i class="fa-solid fa-plus"></i>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn-div">
+    <button type="button" id="edit-btn" class="edit-btn">Gerenciar perfis</button>
+  </div>
+
+  <div class="fade display">
+    <form>
+      <div class="window-more-profile">
+        <div class="input-group">
+          <label for="profile-name">Nome de usuário</label>
+          <input type="text" id="profile-name">
+        </div>
+        <div class="div-btn">
+          <button id="back-button">Voltar</button>
+          <button id="finish-button" type="submit">Concluir</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="../src/js/browse.js"></script>
+</body>
+</html>
