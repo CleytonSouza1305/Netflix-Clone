@@ -1,3 +1,5 @@
+const randomImage = ['https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png', 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/c7906d33850498.56ba69ac353e1.png', 'https://external-preview.redd.it/yble0xDFerMYRYRz9uUgrVhnBrzVULNvCX38QH1za_U.jpg?auto=webp&s=1fc278147524128e733102857f9834a857047ab3', 'https://pm1.aminoapps.com/6936/941ca032795b0d863289ffe9fea681b4c6a7fc7ar1-640-640v2_00.jpg']
+
 async function renderData(id) {
   const response = await fetch(`http://localhost:3000/users/${id}`);
   const data = await response.json();
@@ -73,7 +75,7 @@ moreBtn.addEventListener('click', () => {
     const input = document.getElementById('profile-name');
 
     const newProfile = {
-      imageUrl: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/c7906d33850498.56ba69ac353e1.png',
+      imageUrl: randomImage[Math.floor(Math.random() * randomImage.length)],
       profileName: input.value
     };
 

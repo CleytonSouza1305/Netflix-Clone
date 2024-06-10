@@ -1,3 +1,5 @@
+const randomImage = ['https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png', 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/c7906d33850498.56ba69ac353e1.png', 'https://external-preview.redd.it/yble0xDFerMYRYRz9uUgrVhnBrzVULNvCX38QH1za_U.jpg?auto=webp&s=1fc278147524128e733102857f9834a857047ab3', 'https://pm1.aminoapps.com/6936/941ca032795b0d863289ffe9fea681b4c6a7fc7ar1-640-640v2_00.jpg']
+
 const seeMoreBtn = document.getElementById('see-more')
 seeMoreBtn.addEventListener('click', () => {
   const infos = document.querySelector('.see-more-infos')
@@ -22,6 +24,8 @@ async function getData(emailValue, passwordValue) {
     } else {
       localStorage.setItem('id', res.id)
       window.location.href = './pages/browse.html'
+      const form = document.querySelector('form')
+      form.reset()
     }
   })
   console.log(data);
@@ -33,8 +37,12 @@ form.addEventListener('submit', (ev) => {
   const email = document.getElementById('email-or-number')
   const password = document.getElementById('password')
 
-  getData(email.value, password.value)
-  form.reset()
+    if (email.value !== '' || password.value !== '') {
+    getData(email.value, password.value)
+  } else {
+    const notFound = document.querySelector('.user-not-found')
+    notFound.classList.remove('display')
+  }
 })
 
 function validateForm() {
@@ -99,7 +107,7 @@ async function newUser(emailValue, passwordValue, phoneValue) {
   const password = passwordValue
   const phoneNumber = phoneValue
   
-  const profiles = [{ imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png',  profileName: 'new user'}]
+  const profiles = [{ imageUrl: randomImage[Math.floor(Math.random() * randomImage.length)],  profileName: 'new user'}]
 
   const data = await fetch('http://localhost:3000/users', {
     method: 'POST',
@@ -108,34 +116,48 @@ async function newUser(emailValue, passwordValue, phoneValue) {
       'Content-Type': 'application/json'
     }
   })
-
+  
   const response = await data.json()
   console.log(response);
 }
 
-document.getElementById('newUser').addEventListener('click', () => {
-  const inputPhone = document.getElementById('phone')
-  const inputEmail = document.getElementById('email-or-number')
-  const inputPassword = document.getElementById('password')
+function modalNewUser() {
+  document.getElementById('newUser').addEventListener('click', () => {
+    const inputPhone = document.getElementById('phone')
+    const inputEmail = document.getElementById('email-or-number')
+    const inputPassword = document.getElementById('password')
+  
+    const phoneDiv = document.querySelector('.phone-group')
+    const helpContainer = document.querySelector('.user-not-found')
+  
+    phoneDiv.classList.remove('display')
+    helpContainer.classList.add('display')
+  
+    const newHere = document.querySelector('.new-here')
+    const lastDiv = document.querySelector('.last-div')
+    newHere.classList.add('display')
+    lastDiv.classList.add('display')
+  
+    const rememberPass = document.getElementById('remember-pass')
+    rememberPass.classList.add('display')
+  
+    const h1 = document.querySelector('h1')
+    h1.textContent = 'Login'
 
-  const phoneDiv = document.querySelector('.phone-group')
-  const helpContainer = document.querySelector('.user-not-found')
+    const button = document.getElementById('submitBtn')
+    button.textContent = 'Criar conta'
+    
+    button.addEventListener('click', (ev) => {
+      ev.preventDefault()
 
-  phoneDiv.classList.remove('display')
-  helpContainer.classList.add('display')
+      if (inputEmail.value !== '' && inputPassword.value !== '' && inputPhone.value !== '') {
+        newUser(inputEmail.value, inputPassword.value, inputPhone.value)
+      } else {
+        const notFound = document.querySelector('not-found')
+        notFound.classList.remove('display')
+      }
+    })
+  })
+}
 
-  const newHere = document.querySelector('.new-here')
-  const lastDiv = document.querySelector('.last-div')
-  newHere.classList.add('display')
-  lastDiv.classList.add('display')
-
-  const rememberPass = document.getElementById('remember-pass')
-  rememberPass.classList.add('display')
-
-  const h1 = document.querySelector('h1')
-  h1.textContent = 'Login'
-
-  const button = document.getElementById('submitBtn')
-  button.textContent = 'Criar conta'
-  button.addEventListener('submit', newUser(inputEmail.value, inputPassword.value, inputPhone.value))
-})
+modalNewUser()

@@ -325,12 +325,13 @@ select option {
   font-weight: 600;
 }
 
-.user-not-found a {
+.user-not-found span {
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
 }
 
-.user-not-found a:hover {
+.user-not-found span:hover {
   color: rgb(255, 255, 255, 0.7);
   text-decoration: underline;
 }
