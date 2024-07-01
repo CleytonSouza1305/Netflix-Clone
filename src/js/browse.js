@@ -32,7 +32,7 @@ async function renderData(id) {
   } else {
     moreProfile.classList.remove('display')
   }
-  console.log(response);
+  console.log(data);
 }
 
 async function adicionarPerfil(id, novoPerfil) {
@@ -76,7 +76,8 @@ moreBtn.addEventListener('click', () => {
 
     const newProfile = {
       imageUrl: randomImage[Math.floor(Math.random() * randomImage.length)],
-      profileName: input.value
+      profileName: input.value,
+      favMovie: []
     };
 
     const id = localStorage.getItem('id');

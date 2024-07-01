@@ -108,6 +108,7 @@ body {
   padding: 0.3rem 0.5rem;
   color: #fff;
   border-radius: 4px;
+  margin-left: 1rem;
 }
 
 .window-more-profile button {
@@ -168,3 +169,4 @@ body {
 .display {
   display: none;
 }
+
